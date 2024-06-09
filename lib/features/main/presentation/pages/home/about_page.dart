@@ -18,8 +18,17 @@ class AboutPage extends StatefulWidget {
 
 class _AboutPageState extends State<AboutPage> {
   final PageController pageController = PageController();
+  late List<String> pages;
 
   int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    pages =
+        widget.description.split('. '); // Split the description into sentences
+  }
+
   void onPagechanged(int page) {
     setState(() {
       _currentPage = page;
@@ -27,7 +36,7 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   void nextPage() {
-    if (_currentPage < widget.title.length - 1) {
+    if (_currentPage < pages.length - 1) {
       pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
@@ -71,7 +80,7 @@ class _AboutPageState extends State<AboutPage> {
               child: PageView.builder(
                   controller: pageController,
                   onPageChanged: onPagechanged,
-                  itemCount: widget.title.length,
+                  itemCount: pages.length,
                   itemBuilder: (context, index) {
                     return SizedBox(
                       width: double.infinity,
@@ -111,7 +120,7 @@ class _AboutPageState extends State<AboutPage> {
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Text(
-                                      widget.description,
+                                      pages[index], // Show the page content
                                       style: const TextStyle(
                                           fontSize: 15, color: Colors.black),
                                     ),
@@ -133,12 +142,8 @@ class _AboutPageState extends State<AboutPage> {
                   onTap: previousPage,
                   text: 'Назад',
                 ),
-                Text(' ${_currentPage + 1}/${widget.title.length}'),
-                CustomButton(
-                    onTap: () {
-                      nextPage();
-                    },
-                    text: 'Вперед'),
+                Text(' ${_currentPage + 1}/${pages.length}'),
+                CustomButton(onTap: nextPage, text: 'Вперед'),
               ],
             ),
             const SizedBox(height: 16),
@@ -146,7 +151,7 @@ class _AboutPageState extends State<AboutPage> {
               thumbColor: Colors.white,
               value: (_currentPage + 1).toDouble(),
               min: 1,
-              max: widget.title.length.toDouble(),
+              max: pages.length.toDouble(),
               onChanged: (value) {
                 setState(() {
                   int page = value.toInt() - 1;
