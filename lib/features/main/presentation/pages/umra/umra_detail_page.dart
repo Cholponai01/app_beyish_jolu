@@ -1,7 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:auto_route/auto_route.dart';
-import 'package:beyish_jolu/features/main/domain/models/umra_model.dart';
+import 'package:beyish_jolu/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'package:beyish_jolu/features/main/data/models/umra_model.dart';
 
 @RoutePage()
 class UmraDetailPage extends StatefulWidget {
@@ -95,7 +97,7 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                           child: Column(
                             children: [
                               Container(
-                                height: 80,
+                                height: 70,
                                 width: double.infinity,
                                 padding: const EdgeInsets.all(12.0),
                                 decoration: BoxDecoration(
@@ -154,7 +156,7 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                                         const SizedBox(height: 15),
                                         RichText(
                                           text: TextSpan(
-                                            text: 'Котормосу: ',
+                                            text: 'Которулушу: ',
                                             style: const TextStyle(
                                                 fontSize: 17,
                                                 fontWeight: FontWeight.w500,
@@ -197,6 +199,7 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
             const SizedBox(height: 16),
             Slider(
               thumbColor: Colors.white,
+              activeColor: AppColors.mainColor,
               value: (_currentPage + 1).toDouble(),
               min: 1,
               max: widget.section.duas.length.toDouble(),
