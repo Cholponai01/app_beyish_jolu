@@ -20,9 +20,10 @@ class HadjPage extends StatelessWidget {
           ),
         ),
         iconTheme: const IconThemeData(color: Colors.white),
-        title: const Text(
-          "Ажылык",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+        title: Text(
+          hadj.title,
+          style:
+              const TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         ),
         centerTitle: true,
         backgroundColor: const Color(0XFF4B7F7F),

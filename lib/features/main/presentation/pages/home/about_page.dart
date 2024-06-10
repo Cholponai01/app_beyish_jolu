@@ -14,6 +14,7 @@ class AboutPage extends StatefulWidget {
     super.key,
     required this.aboutModel,
     required this.appBarTitle,
+    required this.initialPage,
   });
 
   @override

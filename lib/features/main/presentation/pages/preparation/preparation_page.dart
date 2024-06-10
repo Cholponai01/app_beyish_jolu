@@ -49,7 +49,6 @@ class PreparationPage extends StatelessWidget {
                 initialPage: index,
                 appBarTitle: 'Даярдык бөлүмү',
                 aboutModel: preparationModel1,
-                initialPage: index,
               ));
             },
           ),
@@ -71,7 +70,6 @@ class PreparationPage extends StatelessWidget {
                 initialPage: index,
                 appBarTitle: 'Даярдык бөлүмү',
                 aboutModel: preparationmodel2,
-                initialPage: index,
               ));
             },
           ),
@@ -90,10 +88,10 @@ class PreparationPage extends StatelessWidget {
             itemCount: preparationmodel3.length,
             onTap: (index) {
               context.router.push(AboutRoute(
-                  initialPage: index,
-                  appBarTitle: 'Даярдык бөлүмү',
-                  aboutModel: preparationmodel3,
-                  initialPage: index));
+                initialPage: index,
+                appBarTitle: 'Даярдык бөлүмү',
+                aboutModel: preparationmodel3,
+              ));
             },
           ),
           const SliverToBoxAdapter(
@@ -114,10 +112,10 @@ class PreparationPage extends StatelessWidget {
             itemCount: preparationmodel4.length,
             onTap: (index) {
               context.router.push(AboutRoute(
-                  initialPage: index,
-                  appBarTitle: 'Даярдык бөлүмү',
-                  aboutModel: preparationmodel4,
-                  initialPage: index));
+                initialPage: index,
+                appBarTitle: 'Даярдык бөлүмү',
+                aboutModel: preparationmodel4,
+              ));
             },
           ),
         ],
