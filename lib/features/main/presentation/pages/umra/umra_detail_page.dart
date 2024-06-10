@@ -95,7 +95,7 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                           child: Column(
                             children: [
                               Container(
-                                height: 70,
+                                height: 80,
                                 width: double.infinity,
                                 padding: const EdgeInsets.all(12.0),
                                 decoration: BoxDecoration(
@@ -154,7 +154,7 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                                         const SizedBox(height: 15),
                                         RichText(
                                           text: TextSpan(
-                                            text: 'Которулушу: ',
+                                            text: 'Котормосу: ',
                                             style: const TextStyle(
                                                 fontSize: 17,
                                                 fontWeight: FontWeight.w500,

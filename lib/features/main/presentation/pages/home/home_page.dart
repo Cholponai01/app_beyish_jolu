@@ -102,7 +102,6 @@ class _HomePageState extends State<HomePage> {
                                 SvgPicture.asset(
                                   gridMenu[index].img,
                                   height: 45,
-                                  // color: AppColors.whiteColor,
                                 ),
                               const SizedBox(height: 10),
                               Text(
