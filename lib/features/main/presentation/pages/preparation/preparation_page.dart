@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:auto_route/auto_route.dart';
-import 'package:beyish_jolu/features/main/models/preparation_model.dart';
+import 'package:beyish_jolu/features/main/domain/models/preparation_model.dart';
 import 'package:beyish_jolu/core/routes/router.gr.dart';
 import 'package:beyish_jolu/features/main/presentation/widgets/sliver_container_widget.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +48,7 @@ class PreparationPage extends StatelessWidget {
               context.router.push(AboutRoute(
                 appBarTitle: 'Даярдык бөлүмү',
                 aboutModel: preparationModel1,
+                initialPage: index,
               ));
             },
           ),
@@ -68,6 +69,7 @@ class PreparationPage extends StatelessWidget {
               context.router.push(AboutRoute(
                 appBarTitle: 'Даярдык бөлүмү',
                 aboutModel: preparationmodel2,
+                initialPage: index,
               ));
             },
           ),
@@ -87,7 +89,8 @@ class PreparationPage extends StatelessWidget {
             onTap: (index) {
               context.router.push(AboutRoute(
                   appBarTitle: 'Даярдык бөлүмү',
-                  aboutModel: preparationmodel3));
+                  aboutModel: preparationmodel3,
+                  initialPage: index));
             },
           ),
           const SliverToBoxAdapter(
@@ -109,7 +112,8 @@ class PreparationPage extends StatelessWidget {
             onTap: (index) {
               context.router.push(AboutRoute(
                   appBarTitle: 'Даярдык бөлүмү',
-                  aboutModel: preparationmodel4));
+                  aboutModel: preparationmodel4,
+                  initialPage: index));
             },
           ),
         ],

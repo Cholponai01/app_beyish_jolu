@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:beyish_jolu/core/routes/router.gr.dart';
 import 'package:beyish_jolu/core/theme/app_colors.dart';
-import 'package:beyish_jolu/features/main/models/hadj_model.dart';
+import 'package:beyish_jolu/features/main/domain/models/hadj_model.dart';
 import 'package:beyish_jolu/features/main/presentation/widgets/home/module_hor_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 @RoutePage()
 class CategoryHadjPage extends StatefulWidget {
@@ -37,7 +38,7 @@ class _CategoryHadjPageState extends State<CategoryHadjPage> {
           children: [
             Image.asset('assets/images/home/Vector.png'),
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Center(
                 child: ListView.separated(
                   shrinkWrap: true,
@@ -46,7 +47,8 @@ class _CategoryHadjPageState extends State<CategoryHadjPage> {
                     leading: Stack(
                       alignment: Alignment.center,
                       children: [
-                        Image.asset('assets/images/home/number.png', width: 30),
+                        SvgPicture.asset("assets/images/home/number.svg",
+                            width: 30),
                         Text(
                           "${index + 1}",
                           style: const TextStyle(
@@ -69,7 +71,7 @@ class _CategoryHadjPageState extends State<CategoryHadjPage> {
                     },
                   ),
                   separatorBuilder: (context, index) =>
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 15),
                   itemCount: hadj.length,
                 ),
               ),

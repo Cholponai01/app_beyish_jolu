@@ -1,15 +1,16 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:auto_route/auto_route.dart';
+import 'package:beyish_jolu/features/main/domain/models/umra_model.dart';
 import 'package:flutter/material.dart';
-
-import 'package:beyish_jolu/features/main/models/umra_model.dart';
 
 @RoutePage()
 class UmraDetailPage extends StatefulWidget {
+  final int initialPage;
   final SectionModel section;
 
   const UmraDetailPage({
     super.key,
+    required this.initialPage,
     required this.section,
   });
 
@@ -21,6 +22,14 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
   PageController pageController = PageController();
 
   int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController(initialPage: widget.initialPage);
+    _currentPage = widget.initialPage;
+  }
+
   void onPagechanged(int page) {
     setState(() {
       _currentPage = page;
