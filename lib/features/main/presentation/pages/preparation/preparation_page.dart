@@ -95,7 +95,7 @@ class PreparationPage extends StatelessWidget {
           const SliverToBoxAdapter(child: SizedBox(height: 15)),
           const SliverToBoxAdapter(
             child: Text(
-              'Умра жана Ажылык учурундагы тыйуулар',
+              'Умра жана Ажылык учурундагы тыюулар',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               textAlign: TextAlign.center,
             ),

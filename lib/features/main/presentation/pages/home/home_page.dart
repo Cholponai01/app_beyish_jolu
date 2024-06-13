@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               Image.asset(
                                 gridMenu[index].img,
-                                height: 65,
+                                height: 45,
                               ),
                               const SizedBox(height: 10),
                               Text(

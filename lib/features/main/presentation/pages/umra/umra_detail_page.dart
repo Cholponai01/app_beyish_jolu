@@ -97,8 +97,6 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                           child: Column(
                             children: [
                               Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.088,
                                 width: double.infinity,
                                 padding: const EdgeInsets.all(12.0),
                                 decoration: BoxDecoration(
@@ -119,65 +117,73 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                               const SizedBox(height: 16),
                               Expanded(
                                 child: SingleChildScrollView(
-                                  child: Container(
-                                    padding: const EdgeInsets.all(16.0),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          widget.section.duas[index].arabicText,
-                                          style: const TextStyle(
-                                              fontSize: 17,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.black),
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(top: 15),
+                                    child: SizedBox(
+                                      child: DecoratedBox(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
-                                        const SizedBox(height: 15),
-                                        RichText(
-                                          text: TextSpan(
-                                            text: 'Окулушу:  ',
-                                            style: const TextStyle(
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.w500,
-                                                color: Colors.black),
-                                            children: <TextSpan>[
-                                              TextSpan(
-                                                  text: widget
-                                                      .section
-                                                      .duas[index]
-                                                      .transliteration,
-                                                  style: const TextStyle(
-                                                      fontSize: 17,
-                                                      fontWeight:
-                                                          FontWeight.w400))
-                                            ],
-                                          ),
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              widget.section.duas[index]
+                                                  .arabicText,
+                                              style: const TextStyle(
+                                                  fontSize: 17,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.black),
+                                            ),
+                                            const SizedBox(height: 15),
+                                            RichText(
+                                              text: TextSpan(
+                                                text: 'Окулушу:  ',
+                                                style: const TextStyle(
+                                                    fontSize: 17,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: Colors.black),
+                                                children: <TextSpan>[
+                                                  TextSpan(
+                                                      text: widget
+                                                          .section
+                                                          .duas[index]
+                                                          .transliteration,
+                                                      style: const TextStyle(
+                                                          fontSize: 17,
+                                                          fontWeight:
+                                                              FontWeight.w400))
+                                                ],
+                                              ),
+                                            ),
+                                            const SizedBox(height: 15),
+                                            RichText(
+                                              text: TextSpan(
+                                                text: 'Которулушу: ',
+                                                style: const TextStyle(
+                                                    fontSize: 17,
+                                                    fontWeight: FontWeight.w500,
+                                                    color: Colors.black),
+                                                children: <TextSpan>[
+                                                  TextSpan(
+                                                      text: widget
+                                                          .section
+                                                          .duas[index]
+                                                          .translation,
+                                                      style: const TextStyle(
+                                                          fontSize: 17,
+                                                          fontWeight:
+                                                              FontWeight.w400))
+                                                ],
+                                              ),
+                                            )
+                                          ],
                                         ),
-                                        const SizedBox(height: 15),
-                                        RichText(
-                                          text: TextSpan(
-                                            text: 'Которулушу: ',
-                                            style: const TextStyle(
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.w500,
-                                                color: Colors.black),
-                                            children: <TextSpan>[
-                                              TextSpan(
-                                                  text: widget.section
-                                                      .duas[index].translation,
-                                                  style: const TextStyle(
-                                                      fontSize: 17,
-                                                      fontWeight:
-                                                          FontWeight.w400))
-                                            ],
-                                          ),
-                                        )
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
+                              )
                             ],
                           ),
                         ),
