@@ -3,7 +3,7 @@ import 'package:beyish_jolu/core/theme/app_colors.dart';
 import 'package:beyish_jolu/features/main/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-import 'package:beyish_jolu/features/main/data/models/fine_model.dart';
+import 'package:beyish_jolu/features/main/domain/models/fine_model.dart';
 
 @RoutePage()
 class AboutPage extends StatefulWidget {
@@ -153,7 +153,7 @@ class _AboutPageState extends State<AboutPage> {
                     nextPage();
                   },
                   text: 'Вперед',
-                 ),
+                ),
               ],
             ),
             const SizedBox(height: 16),

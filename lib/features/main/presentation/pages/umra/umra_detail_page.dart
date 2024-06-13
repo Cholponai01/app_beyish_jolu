@@ -3,7 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:beyish_jolu/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import 'package:beyish_jolu/features/main/data/models/umra_model.dart';
+import 'package:beyish_jolu/features/main/domain/models/umra_model.dart';
 
 @RoutePage()
 class UmraDetailPage extends StatefulWidget {
@@ -97,7 +97,8 @@ class _UmraDetailPageState extends State<UmraDetailPage> {
                           child: Column(
                             children: [
                               Container(
-                                height: 70,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.088,
                                 width: double.infinity,
                                 padding: const EdgeInsets.all(12.0),
                                 decoration: BoxDecoration(
